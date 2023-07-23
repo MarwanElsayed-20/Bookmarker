@@ -1,0 +1,170 @@
+/* global */
+body {
+  font-family: "Tektur", cursive;
+  background-color: var(--secondary-color);
+}
+:root {
+  --main-color: #5f462d;
+  --primary-h: 30;
+  --primary-s: 36%;
+  --primary-l: 27%;
+  --secondary-color: beige;
+  --transition: all 0.3s ease;
+}
+::-moz-selection {
+  background-color: var(--main-color);
+}
+::selection {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+.line {
+  width: 80%;
+  height: 3px;
+  background-color: var(--main-color);
+  margin: auto;
+}
+tr {
+  border-bottom: 1px solid;
+}
+a,
+tr i {
+  color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  cursor: pointer;
+  transition: var(--transition);
+}
+a:hover,
+tr i:hover {
+  --primary-l: 36%;
+  scale: 1.1;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* header */
+.bookmark-header {
+  background-image: url("../imgs/116250488449gtytpzfjxaxbqubcruhahoote4mehmbutzpptbfsz8x4ro3i7q7zag2qwtqxznrmsenley4tvrnocvoyamww8hjn7jwdiuvcgik.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+}
+.bookmark-header::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.bookmark-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.bookmark-header h1 {
+  color: var(--secondary-color);
+  font-size: 8rem;
+  text-align: center;
+  font-weight: bold;
+}
+.bookmark-header p {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 100;
+}
+.bookmark-header i {
+  margin: 0 10px;
+}
+/* body */
+.bookmark-body {
+  text-align: center;
+}
+.bookmark-body .bookmark-inputs {
+  position: relative;
+  top: -23.5px;
+  z-index: 2;
+}
+.bookmark-body .input-group span {
+  background: var(--main-color);
+  color: var(--secondary-color);
+  border: 3px solid var(--main-color);
+  border-radius: 0;
+}
+.bookmark-body .input-group input {
+  border: 3px solid var(--main-color);
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border-radius: 0;
+}
+.form-control:focus {
+  box-shadow: inset 0 0 10px 0px var(--main-color);
+}
+input::placeholder {
+  font-size: 1rem;
+  color: #5f462d7a !important;
+}
+.bookmark-body #submit {
+  padding: 10px 50px;
+  margin: 50px 0 35px;
+  color: var(--secondary-color);
+  background-color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  border-color: var(--main-color);
+  border-radius: 0;
+  transition: var(--transition);
+}
+.bookmark-body #submit:hover {
+  --primary-l: 36%;
+}
+.bookmark-body .table {
+  --bs-table-color: none;
+  --bs-table-bg: none;
+}
+.bookmark-body .table thead {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.error .message {
+  background-color: var(--secondary-color);
+  min-height: 50%;
+  
+  padding: 50px;
+  text-align: left;
+  position: relative;
+}
+.error .message .fa-x {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.error .message h2 {
+  margin-bottom: 25px;
+}
+.error .message ul > li {
+  margin: 0 0 10px;
+}
+.error .message i {
+  margin-right: 10px;
+  color: var(--main-color);
+}

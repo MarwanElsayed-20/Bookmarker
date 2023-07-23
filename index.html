@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- *stylesheet links* -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css custom -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+    <title>Assignment - 9 ( JS - 3 )</title>
+  </head>
+  <body>
+    <header class="bookmark-header">
+      <div class="container">
+        <h1>Bookmarker</h1>
+        <p>
+          <i class="fa-regular fa-bookmark"></i>Bookmark your favorite sites<i
+            class="fa-regular fa-bookmark"
+          ></i>
+        </p>
+      </div>
+    </header>
+    <section class="bookmark-body">
+      <div id="bookmark-body" class="container">
+        <form action="">
+          <div class="bookmark-inputs">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="input-group input-group-lg flex-nowrap">
+                  <span class="input-group-text" id="addon-wrapping"
+                    ><i class="fa-solid fa-book-bookmark"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Bookmark Name"
+                    aria-label="Bookmark Name"
+                    aria-describedby="addon-wrapping"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group input-group-lg flex-nowrap">
+                  <span class="input-group-text" id="addon-wrapping"
+                    ><i class="fa-solid fa-link"></i
+                  ></span>
+                  <input
+                    type="url"
+                    class="form-control"
+                    placeholder="Website URL"
+                    aria-label="Website URL"
+                    aria-describedby="addon-wrapping"
+                  />
+                </div>
+              </div>
+            </div>
+            <button id="submit" class="btn">Add</button>
+          </div>
+        </form>
+        <div class="line"></div>
+        <table class="table mt-5">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableRow"></tbody>
+        </table>
+      </div>
+      <div id="error" class="error d-none">
+        <div class="message">
+          <i id="fa-x" class="fa-solid fa-x"></i>
+          <h2>
+            Bookmark Name & Website Url is not valid, Please follow the rules
+            below :
+          </h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-circle-exclamation"></i>Bookmark Name:
+              <ol>
+                <li>Must contain at least 3 consecutive characters</li>
+                <li>It cant contains a special characters</li>
+                <li>Must not end the name with any kind of spaces</li>
+              </ol>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-exclamation"></i>Website URL:
+              <ol>
+                <li>The URL must start with ( http:// or https:// )</li>
+                <li>The website must start with www</li>
+                <li>The website need to be a valid website</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

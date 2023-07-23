@@ -1,0 +1,47 @@
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .bookmark-header .container {
+    justify-content: center;
+  }
+  .bookmark-header h1 {
+    font-size: 4rem;
+  }
+  .bookmark-header p {
+    font-size: 1rem;
+  }
+  .bookmark-body .bookmark-inputs {
+    top: -58.5px;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  .bookmark-body #submit {
+    margin: 25px 0 35px;
+  }
+  .bookmark-body .bookmark-inputs {
+    border-bottom: 3px solid var(--main-color);
+  }
+  .line {
+    display: none;
+  }
+  .bookmark-body .table {
+    margin-top: 0 !important;
+  }
+  .error {
+    padding: 0 15px;
+  }
+  .error .message {
+    min-width: 50%;
+    padding: 45px 35px;
+  }
+  .error .message .fa-x {
+    top: 15px;
+    right: 10px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .error .message {
+    width: 50%;
+  }
+}
